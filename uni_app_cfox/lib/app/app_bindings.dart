@@ -6,9 +6,9 @@ import 'package:uni_app_game/app/app_game_bindings.dart';
 import 'package:uni_app_mine_cfox/app/app_mine_bindings.dart';
 import 'package:uni_app_video/app/app_video_bindings.dart';
 import 'package:uni_app_wallet/app/app_wallet_bindings.dart';
-import 'package:uni_app_up/app/app_up_bindings.dart';
 import 'package:uni_base/getx/get_base_binding.dart';
 import 'package:uni_app_community/app/app_community_bindings.dart';
+import 'package:uni_app_cfox/page/main/main_controller.dart';
 
 class AppBindings extends GetBaseBindings {
   @override
@@ -35,7 +35,7 @@ class AppBindings extends GetBaseBindings {
     AppMineBindings.bindings();
 
     /// up
-    // AppUpBindings.bindings();
+     //AppUpBindings.bindings();
 
     /// 抖阴
     AppDouyinBindings.bindings();

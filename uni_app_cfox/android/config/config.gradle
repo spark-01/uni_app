@@ -1,6 +1,9 @@
 ext.androidConfig = [compileSdkVersion: 33,
                      minSdkVersion    : 21,
-                     targetSdkVersion : 33
+                     targetSdkVersion : 33,
+                     applicationId    : "com.uni.cfox",
+                     // 应用类型
+                     appType          : "cfox"
 ]
 
 ext.signConfig = [keyAlias    : 'apollo',
@@ -11,38 +14,32 @@ ext.signConfig = [keyAlias    : 'apollo',
                   //releaseTime : new Date().format("yyyyMMdd", TimeZone.getDefault()),
                   releaseTime : new Date().format("MMdd", TimeZone.getDefault()),
                   //多渠道配置 维度
-                  dimensions  : "env",]
+                  dimensions  : "env"]
 
 // 打包环境
 ext.env = [
         //pro环境
-        vCode     : 11,
-        vName     : "1.3.0",
+        vCode     : 133,
+        vName     : "1.3.3",
         appName   : "彩狐视频",
-        appIcon   : "@mipmap/ic_logo_cfox",
 
         //dev环境
-        vCodeDev  : 1,
-        vNameDev  : "1.3.0",
+        vCodeDev  : 133,
+        vNameDev  : "1.3.3",
         appNameDev: "彩狐视频(D)",
-        appIconDev: "@mipmap/ic_logo_cfox",
         suffixDev : ".dev",
 
         //uat环境
-        vCodeUat  : 4,
-        vNameUat  : "1.3.0",
+        vCodeUat  : 133,
+        vNameUat  : "1.3.3",
         appNameUat: "彩狐视频(U)",
-        appIconUat: "@mipmap/ic_logo_cfox",
         suffixUat : ".uat",
 
         //pre环境
-        vCodePre  : 2,
-        vNamePre  : "1.3.0",
+        vCodePre  : 133,
+        vNamePre  : "1.3.3",
         appNamePre: "彩狐视频(P)",
-        appIconPre: "@mipmap/ic_logo_cfox",
         suffixPre : ".pre",
-
-
 ]
 
 

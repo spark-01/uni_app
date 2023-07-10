@@ -15,7 +15,7 @@ class MyApp extends BaseApp {
 
   /// 标题
   @override
-  String getTitle() => "测试组合";
+  String getTitle() => "彩狐视频";
 
   /// 获取页面
   @override

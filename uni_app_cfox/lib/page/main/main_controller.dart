@@ -28,32 +28,32 @@ class MainController extends BaseMainController {
     /// 视频页面
     tabItems.add(MainTabItem(
         name: AppTrans.message("tab_video"),
-        iconNormal: Assets.test.tabVideoNormal.path,
-        iconSelected: Assets.test.tabVideoLottie, selectedLottie: true));
+        iconNormal: Assets.cfox.tabVideoNormal.path,
+        iconSelected: Assets.cfox.tabVideoLottie, selectedLottie: true));
 
     /// 抖音页面
     tabItems.add(MainTabItem(
         name: AppTrans.message("tab_douyin"),
-        iconNormal: Assets.test.tabDouyinNomal.path,
-        iconSelected: Assets.test.tabDouyinLottie, selectedLottie: true));
+        iconNormal: Assets.cfox.tabDouyinNomal.path,
+        iconSelected: Assets.cfox.tabDouyinLottie, selectedLottie: true));
 
     /// 游戏页面
     tabItems.add(MainTabItem(
         name: AppTrans.message("tab_game"),
-        iconNormal: Assets.test.tabGameNormal.path,
-        iconSelected: Assets.test.tabGameLottie, selectedLottie: true));
+        iconNormal: Assets.cfox.tabGameNormal.path,
+        iconSelected: Assets.cfox.tabGameLottie, selectedLottie: true));
 
     /// 社区页面
     tabItems.add(MainTabItem(
         name: AppTrans.message("tab_community"),
-        iconNormal: Assets.test.tabCommunityNomal.path,
-        iconSelected: Assets.test.tabCommunityLottie, selectedLottie: true));
+        iconNormal: Assets.cfox.tabCommunityNomal.path,
+        iconSelected: Assets.cfox.tabCommunityLottie, selectedLottie: true));
 
     /// 我的页面
     tabItems.add(MainTabItem(
         name: AppTrans.message("tab_mine"),
-        iconNormal: Assets.test.tabMineNormal.path,
-        iconSelected: Assets.test.tabMineLottie, selectedLottie: true));
+        iconNormal: Assets.cfox.tabMineNormal.path,
+        iconSelected: Assets.cfox.tabMineLottie, selectedLottie: true));
 
   }
 }
