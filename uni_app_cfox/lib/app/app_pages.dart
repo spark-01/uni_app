@@ -1,0 +1,61 @@
+import 'package:get/get.dart';
+import 'package:uni_app_base/app/app_base_pages.dart';
+import 'package:uni_app_game/app/app_game_pages.dart';
+import 'package:uni_app_mine_cfox/app/app_mine_pages.dart';
+import 'package:uni_app_video/app/app_video_pages.dart';
+import 'package:uni_app_game/page/home/game_home_binding.dart';
+import 'package:uni_app_wallet/page/home/wallet_home_binding.dart';
+import 'package:uni_app_wallet/app/app_wallet_pages.dart';
+import 'package:uni_base/routes/base_routes.dart';
+import 'package:uni_app_test/page/main/test_main_page.dart';
+import 'package:uni_app_test/app/app_test_bindings.dart';
+import 'package:uni_app_community/app/app_community_pages.dart';
+import 'package:uni_app_douyin/app/app_douyin_pages.dart';
+import 'package:uni_app_creator/app/app_creator_pages.dart';
+
+class AppPages {
+  AppPages._();
+
+  static final pages = [
+    /// 视频主页
+    GetPage(name: BaseRoutes.videoMain, page: () => TestMainPage(), bindings: [
+      AppTestBindings(),
+      GameHomeBinding(),
+      WalletHomeBinding(),
+    ]),
+  ];
+
+  static List<GetPage> getAllPages() {
+    List<GetPage> pages = [];
+
+    /// 测试
+    pages.addAll(AppPages.pages);
+
+    /// 通用功能
+    pages.addAll(AppBasePages.pages);
+
+    /// 游戏
+    pages.addAll(AppGamePages.pages);
+
+    /// 钱包
+    pages.addAll(AppWalletPages.pages);
+
+    /// 视频
+    pages.addAll(AppVideoPages.pages);
+
+    /// 社区
+    pages.addAll(AppCommunityPages.pages);
+
+    /// 我的
+    pages.addAll(AppMinePages.pages);
+
+    /// 抖阴
+    pages.addAll(AppDouyinPages.pages);
+
+    /// 创作者中心
+    pages.addAll(AppCreatorPages.pages);
+
+
+    return pages;
+  }
+}
