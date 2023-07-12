@@ -17,7 +17,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- 安装.apk文件 -->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-
+    <!--剪贴板权限-->
+    <permission android:name="android.permission.READ_CLIPBOARD_IN_BACKGROUND" />
     <application
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
