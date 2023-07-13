@@ -31,4 +31,24 @@ class MyApp extends BaseApp {
     child = OLEasyLoading.init()(context, child);
     return child;
   }
+
+  @override
+  Iterable<Locale> getSupportedLocales() {
+    // TODO: implement getSupportedLocales
+    return [
+      const Locale('zh', 'CN'),
+    ];
+  }
+
+  @override
+  Iterable<LocalizationsDelegate>? supportLocalizationsDelegates() {
+    // TODO: implement supportLocalizationsDelegates
+    return  [
+      GlobalMaterialLocalizations.delegate,
+      GlobalWidgetsLocalizations.delegate,
+      GlobalCupertinoLocalizations.delegate,
+      RefreshLocalizations.delegate,
+    ];
+  }
+
 }
