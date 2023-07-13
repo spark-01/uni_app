@@ -31,7 +31,7 @@ dependencies:
       url: https://pub.91momo50.vip
   # 网络
   uni_http:
-    version: ^1.1.7
+    version: ^1.1.8
     hosted:
       name: uni_http
       url: https://pub.91momo50.vip
