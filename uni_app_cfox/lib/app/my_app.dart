@@ -34,17 +34,10 @@ class MyApp extends BaseApp {
     return child;
   }
 
-  @override
-  Iterable<Locale> getSupportedLocales() {
-    // TODO: implement getSupportedLocales
-    return [
-      const Locale('zh', 'CN'),
-    ];
-  }
+
 
   @override
   Iterable<LocalizationsDelegate>? supportLocalizationsDelegates() {
-    // TODO: implement supportLocalizationsDelegates
     return  [
       GlobalMaterialLocalizations.delegate,
       GlobalWidgetsLocalizations.delegate,
