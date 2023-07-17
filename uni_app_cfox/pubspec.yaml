@@ -4,7 +4,7 @@ homepage: http://git.91momo50.vip/flutter/uni-common.git
 repository: http://git.91momo50.vip/flutter/uni-common.git
 
 publish_to: 'https://pub.91momo50.vip'
-version: 1.3.2
+version: 1.3.3
 
 environment:
   sdk: '>=2.19.0 <3.0.0'
@@ -43,7 +43,7 @@ dependencies:
       url: https://pub.91momo50.vip
   # 通用
   uni_app_base:
-    version: ^1.0.4
+    version: ^1.0.5
     hosted:
       name: uni_app_base
       url: https://pub.91momo50.vip
@@ -79,7 +79,7 @@ dependencies:
       url: https://pub.91momo50.vip
   # 创作中心
   uni_app_creator:
-    version: ^1.0.0
+    version: ^1.0.2
     hosted:
       name: uni_app_creator
       url: https://pub.91momo50.vip
