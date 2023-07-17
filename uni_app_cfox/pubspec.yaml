@@ -61,7 +61,7 @@ dependencies:
       url: https://pub.91momo50.vip
   # 视频
   uni_app_video:
-    version: ^1.0.0
+    version: ^1.0.0-dev.1
     hosted:
       name: uni_app_video
       url: https://pub.91momo50.vip
@@ -89,29 +89,33 @@ dependencies:
     hosted:
       name: uni_app_up
       url: https://pub.91momo50.vip
+  # 我的
   uni_app_mine_cfox:
-    path: ../../uni_sub_app/uni_app_mine_cfox
+    version: ^1.0.0-bate.1
+    hosted:
+      name: uni_app_up
+      url: https://pub.91momo50.vip
 
 # 覆盖依赖
-dependency_overrides:
-  uni_app_base:
-    path: ../../uni_sub_app/uni_app_base
-  uni_app_creator:
-    path: ../../uni_sub_app/uni_app_creator
-  uni_app_game:
-    path: ../../uni_sub_app/uni_app_game
-  uni_app_wallet:
-    path: ../../uni_sub_app/uni_app_wallet
-  uni_app_community:
-    path: ../../uni_sub_app/uni_app_community
-  uni_app_video:
-    path: ../../uni_sub_app/uni_app_video
-  uni_app_up:
-    path: ../../uni_sub_app/uni_app_up
-  uni_app_mine_cfox:
-    path: ../../uni_sub_app/uni_app_mine_cfox
-  uni_app_douyin:
-    path: ../../uni_sub_app/uni_app_douyin
+#dependency_overrides:
+#  uni_app_base:
+#    path: ../../uni_sub_app/uni_app_base
+#  uni_app_creator:
+#    path: ../../uni_sub_app/uni_app_creator
+#  uni_app_game:
+#    path: ../../uni_sub_app/uni_app_game
+#  uni_app_wallet:
+#    path: ../../uni_sub_app/uni_app_wallet
+#  uni_app_community:
+#    path: ../../uni_sub_app/uni_app_community
+#  uni_app_video:
+#    path: ../../uni_sub_app/uni_app_video
+#  uni_app_up:
+#    path: ../../uni_sub_app/uni_app_up
+#  uni_app_mine_cfox:
+#    path: ../../uni_sub_app/uni_app_mine_cfox
+#  uni_app_douyin:
+#    path: ../../uni_sub_app/uni_app_douyin
 dev_dependencies:
   flutter_test:
     sdk: flutter
