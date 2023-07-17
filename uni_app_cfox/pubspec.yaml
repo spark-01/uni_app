@@ -67,7 +67,7 @@ dependencies:
       url: https://pub.91momo50.vip
   # 抖音
   uni_app_douyin:
-    version: ^1.0.2
+    version: ^1.0.3
     hosted:
       name: uni_app_douyin
       url: https://pub.91momo50.vip
