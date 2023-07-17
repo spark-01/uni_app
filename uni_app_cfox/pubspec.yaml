@@ -19,81 +19,81 @@ dependencies:
   get: ^4.6.5
   # 基类
   uni_base:
-    version: ^1.2.4
+    version: ^1.2.5
     hosted:
       name: uni_base
       url: https://pub.91momo50.vip
   # 组件
   uni_widget:
-    version: ^1.0.7
+    version: ^1.0.8
     hosted:
       name: uni_widget
       url: https://pub.91momo50.vip
   # 网络
   uni_http:
-    version: ^1.2.0
+    version: ^1.2.1
     hosted:
       name: uni_http
       url: https://pub.91momo50.vip
   # 图片
   uni_image:
-    version: ^1.0.4
+    version: ^1.0.5
     hosted:
       name: uni_image
       url: https://pub.91momo50.vip
   # 通用
   uni_app_base:
-    version: ^1.0.7
+    version: ^1.0.8
     hosted:
       name: uni_app_base
       url: https://pub.91momo50.vip
   # 钱包
   uni_app_wallet:
-    version: ^1.0.5
+    version: ^1.0.6
     hosted:
       name: uni_app_wallet
       url: https://pub.91momo50.vip
   # 游戏
   uni_app_game:
-    version: ^1.0.3
+    version: ^1.0.4
     hosted:
       name: uni_app_game
       url: https://pub.91momo50.vip
   # 视频
   uni_app_video:
-    version: ^1.0.0-bate.3
+    version: ^1.0.0-bate.4
     hosted:
       name: uni_app_video
       url: https://pub.91momo50.vip
   # 抖音
   uni_app_douyin:
-    version: ^1.0.3
+    version: ^1.0.4
     hosted:
       name: uni_app_douyin
       url: https://pub.91momo50.vip
   # 社区
   uni_app_community:
-    version: ^1.0.1
+    version: ^1.0.2
     hosted:
       name: uni_app_community
       url: https://pub.91momo50.vip
   # 创作中心
   uni_app_creator:
-    version: ^1.0.3
+    version: ^1.0.4
     hosted:
       name: uni_app_creator
       url: https://pub.91momo50.vip
   # up主
   uni_app_up:
-    version: ^1.0.1
+    version: ^1.0.2
     hosted:
       name: uni_app_up
       url: https://pub.91momo50.vip
   # 我的
   uni_app_mine_cfox:
-    version: ^1.0.0-bate.4
+    version: ^1.0.0-bate.6
     hosted:
-      name: uni_app_up
+      name: uni_app_mine_cfox
       url: https://pub.91momo50.vip
 
 # 覆盖依赖
