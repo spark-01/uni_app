@@ -61,7 +61,7 @@ dependencies:
       url: https://pub.91momo50.vip
   # 视频
   uni_app_video:
-    version: ^1.0.0-dev.1
+    version: ^1.0.0-bate.2
     hosted:
       name: uni_app_video
       url: https://pub.91momo50.vip
