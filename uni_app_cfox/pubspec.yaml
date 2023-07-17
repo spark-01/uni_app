@@ -43,7 +43,7 @@ dependencies:
       url: https://pub.91momo50.vip
   # 通用
   uni_app_base:
-    version: ^1.0.6
+    version: ^1.0.7
     hosted:
       name: uni_app_base
       url: https://pub.91momo50.vip
@@ -91,7 +91,7 @@ dependencies:
       url: https://pub.91momo50.vip
   # 我的
   uni_app_mine_cfox:
-    version: ^1.0.0-bate.2
+    version: ^1.0.0-bate.3
     hosted:
       name: uni_app_up
       url: https://pub.91momo50.vip
