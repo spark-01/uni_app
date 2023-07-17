@@ -91,7 +91,7 @@ dependencies:
       url: https://pub.91momo50.vip
   # 我的
   uni_app_mine_cfox:
-    version: ^1.0.0-bate.3
+    version: ^1.0.0-bate.4
     hosted:
       name: uni_app_up
       url: https://pub.91momo50.vip
