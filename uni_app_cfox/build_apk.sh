@@ -71,14 +71,16 @@ fi
 #创建目录
 mkdir -p "${apk_path}"
 
-echo "====================== 开始清理 ======================="
+echo "==> 开始清理 ==="
 flutter clean
-echo "====================== 更新依赖 ======================="
+# 删除lock文件
+rm -rf pubspec.lock
+echo "==>  更新依赖 ==="
 flutter pub get
 
 # 开始打包
 if (($((ch_num)) == 0)); then
-  echo "================= 开始构建：全部渠道包 ================="
+  echo "==> 开始构建：全部渠道包 ==="
   channel=""
   for ((i = 0; i < $((channel_len)); i++)); do
     channel=${channel_code_arr[$i]}
@@ -89,7 +91,7 @@ if (($((ch_num)) == 0)); then
   done
 else
   channel=${channel_code_arr[$((ch_num - 1))]}
-  echo "============= 正在构建：${channel} 渠道包 =============="
+  echo "==> 正在构建：${channel} 渠道包 ==="
   flutter build apk --dart-define=PACKAGE_ENV="${env}" --dart-define=CHANNEL="${channel}" --target-platform android-arm --split-per-abi --release --flavor "${env}"
   # 移动apk到指定文件
   cp -R "${release_path}"*.apk "${apk_path}"
@@ -100,10 +102,10 @@ end_time=$(date +%s)
 var_time=$((end_time - start_time))
 # 判断apk目录下是否有文件
 if [ "$(ls -A "${apk_path}")" ]; then
-  echo "================ APK包已导出:${apk_path} 【耗时：${var_time}s】==============="
+  echo "==> APK包已导出:${apk_path} 【耗时：${var_time}s】==="
   open "${apk_path}"
 else
-  echo "==================== APK包导出失败 【耗时：${var_time}s】 ===================="
+  echo "==>  APK包导出失败 【耗时：${var_time}s】 ==="
   exit 1
 fi
 exit 0
