@@ -79,11 +79,7 @@ dependencies:
       url: https://pub.91momo50.vip
   # 创作中心
   uni_app_creator:
-<<<<<<< HEAD
-    version: ^1.0.2
-=======
     version: ^1.0.3
->>>>>>> 5f4f9372c8aa7417fb0ccdbcf9fa7474db4e1a41
     hosted:
       name: uni_app_creator
       url: https://pub.91momo50.vip
