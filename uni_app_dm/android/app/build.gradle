@@ -11,31 +11,52 @@ if (flutterRoot == null) {
     throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
 }
 
-def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
-if (flutterVersionCode == null) {
-    flutterVersionCode = '1'
-}
-
-def flutterVersionName = localProperties.getProperty('flutter.versionName')
-if (flutterVersionName == null) {
-    flutterVersionName = '1.0'
-}
+// 签名
+def androidConfig = rootProject.ext.androidConfig
+// 签名
+def signConfig = rootProject.ext.signConfig
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdkVersion flutter.compileSdkVersion
-    ndkVersion flutter.ndkVersion
-
+    /// 获取dart-defines参数
+    def agrs = []
+    if (project.hasProperty('dart-defines')) {
+        def dartDefines = project.property('dart-defines')
+        if (dartDefines != null) {
+            agrs = project.property('dart-defines')
+                    .split(',')
+                    .collectEntries { entry ->
+                        def pair = new String(entry.decodeBase64(), 'UTF-8').split('=')
+                        [(pair.first()): pair.last()]
+                    }
+        }
+    }
+    // 渠道
+    def channel = agrs["CHANNEL"]
+    if (channel == null) {
+        channel = "official"
+    }
+    println("====渠道：${channel}")
+    // 应用类型
+    def appType = androidConfig.appType
+    println("====类型：${appType}")
+    // 环境
+    def env = rootProject.ext.env
+    println("====环境参数：${env}")
+    // 包名
+    def curApplicationId = androidConfig.applicationId
+    println("====包名：${curApplicationId}")
+    compileSdkVersion androidConfig.compileSdkVersion
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
 
     sourceSets {
@@ -43,25 +64,108 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.uni.dm"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdkVersion flutter.minSdkVersion
-        targetSdkVersion flutter.targetSdkVersion
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
+        applicationId curApplicationId
+        minSdkVersion androidConfig.minSdkVersion
+        targetSdkVersion androidConfig.targetSdkVersion
+        multiDexEnabled true
+    }
+    signingConfigs {
+        release {
+            keyAlias signConfig.keyAlias
+            keyPassword signConfig.keyPassword
+            storeFile file(signConfig.keypath)
+            storePassword signConfig.keyStorePass
+        }
     }
 
     buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+        }
+
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+        }
+
+        //批量修改生成的apk文件名
+        def versionName = null
+        def flavorName = null
+        def releaseTime = signConfig.releaseTime
+        def channelCode
+        // 官方包不展示渠道号
+        if (channel.toString() == "official") {
+            channelCode = ""
+        } else {
+            channelCode = "_${channel}"
+        }
+        android.applicationVariants.all { variant ->
+            variant.outputs.all { output ->
+                def flavors = variant.productFlavors
+                for (int i = 0; i < flavors.size(); i++) {
+                    def flavor = flavors[i]
+                    versionName = "v${flavor.versionName}"
+                    flavorName = "${flavor.name}"
+                    if (flavorName.toString() == "pro") {
+                        outputFileName = "${appType}_${versionName}_${releaseTime}${channelCode}.apk"
+                    } else {
+                        outputFileName = "${appType}_${versionName}_${releaseTime}_${flavorName}${channelCode}.apk"
+                    }
+                }
+            }
+        }
+    }
+
+
+    //多渠道、多环境的不同配置
+    flavorDimensions signConfig.dimensions
+    productFlavors {
+        //线上
+        pro {
+            dimension signConfig.dimensions
+            versionCode env.vCode
+            versionName env.vName
+
+            manifestPlaceholders = [app_name: env.appName]
+        }
+        //开发
+        dev {
+            dimension signConfig.dimensions
+            versionCode env.vCodeDev
+            versionName env.vNameDev
+
+            applicationIdSuffix env.suffixDev//包名后缀
+            versionNameSuffix env.suffixDev//版本后缀
+
+            manifestPlaceholders = [app_name: env.appNameDev]
+        }
+        //测试
+        uat {
+            dimension signConfig.dimensions
+            versionCode env.vCodeUat
+            versionName env.vNameUat
+
+            applicationIdSuffix env.suffixUat//包名后缀
+            versionNameSuffix env.suffixUat//版本后缀
+
+            manifestPlaceholders = [app_name: env.appNameUat]
+        }
+        //预发布
+        pre {
+            dimension signConfig.dimensions
+            versionCode env.vCodePre
+            versionName env.vNamePre
+
+            applicationIdSuffix env.suffixPre//包名后缀
+            versionNameSuffix env.suffixPre//版本后缀
+
+            manifestPlaceholders = [app_name: env.appNamePre]
         }
     }
 }
-
 flutter {
     source '../..'
 }

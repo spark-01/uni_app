@@ -1,0 +1,44 @@
+ext.androidConfig = [compileSdkVersion: 33,
+                     minSdkVersion    : 21,
+                     targetSdkVersion : 33,
+                     applicationId    : "com.uni.dm",
+                     // 应用类型
+                     appType          : "dm"]
+
+ext.signConfig = [keyAlias    : 'apollo',
+                  keyPassword : '123456',
+                  keypath     : './../config/apollo.jks',
+                  keyStorePass: '123456',
+                  // app文件名时间格式
+                  //releaseTime : new Date().format("yyyyMMdd", TimeZone.getDefault()),
+                  releaseTime : new Date().format("MMdd", TimeZone.getDefault()),
+                  //多渠道配置 维度
+                  dimensions  : "env"]
+
+// 打包环境
+ext.env = [
+        //pro环境
+        vCode     : 1,
+        vName     : "1.0.0",
+        appName   : "动漫社",
+
+        //dev环境
+        vCodeDev  : 1,
+        vNameDev  : "1.0.0",
+        appNameDev: "动漫社(D)",
+        suffixDev : ".dev",
+
+        //uat环境
+        vCodeUat  : 1,
+        vNameUat  : "1.0.0",
+        appNameUat: "动漫社(U)",
+        suffixUat : ".uat",
+
+        //pre环境
+        vCodePre  : 1,
+        vNamePre  : "1.0.0",
+        appNamePre: "动漫社(P)",
+        suffixPre : ".pre",
+]
+
+

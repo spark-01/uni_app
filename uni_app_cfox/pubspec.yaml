@@ -19,27 +19,33 @@ dependencies:
   get: ^4.6.5
   # 基类
   uni_base:
-    version: ^1.2.5
+    version: ^1.3.3
     hosted:
       name: uni_base
       url: https://pub.91momo50.vip
   # 组件
   uni_widget:
-    version: ^1.0.8
+    version: ^1.1.6
     hosted:
       name: uni_widget
       url: https://pub.91momo50.vip
   # 网络
   uni_http:
-    version: ^1.2.1
+    version: ^1.2.5
     hosted:
       name: uni_http
       url: https://pub.91momo50.vip
   # 图片
   uni_image:
-    version: ^1.0.5
+    version: ^1.0.6
     hosted:
       name: uni_image
+      url: https://pub.91momo50.vip
+  # 下拉刷新
+  uni_refresh:
+    version: ^1.0.1
+    hosted:
+      name: uni_refresh
       url: https://pub.91momo50.vip
   # 通用
   uni_app_base:

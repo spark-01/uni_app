@@ -20,7 +20,7 @@ class AppPages {
   AppPages._();
 
   static final pages = [
-    /// 视频主页
+    /// 主页
     GetPage(name: BaseRoutes.videoMain, page: () => MainPage(), bindings: [
       AppBindings(),
       GameHomeBinding(),

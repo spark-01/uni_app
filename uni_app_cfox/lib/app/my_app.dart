@@ -6,7 +6,6 @@ import 'package:uni_widget/ol_loading_widget.dart';
 import 'package:uni_app_cfox/app/app_bindings.dart';
 import 'package:uni_app_cfox/app/app_pages.dart';
 import 'package:uni_refresh/pull_to_refresh.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
 class MyApp extends BaseApp {
   const MyApp({Key? key}) : super(key: key);
@@ -34,16 +33,10 @@ class MyApp extends BaseApp {
     return child;
   }
 
-
-
   @override
-  Iterable<LocalizationsDelegate>? supportLocalizationsDelegates() {
-    return  [
-      GlobalMaterialLocalizations.delegate,
-      GlobalWidgetsLocalizations.delegate,
-      GlobalCupertinoLocalizations.delegate,
+  List<LocalizationsDelegate> otherSupportLocal() {
+    return [
       RefreshLocalizations.delegate,
     ];
   }
-
 }
