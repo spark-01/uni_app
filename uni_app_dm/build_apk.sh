@@ -72,11 +72,11 @@ fi
 mkdir -p "${apk_path}"
 
 echo "==> 开始清理 ==="
-# flutter clean
+flutter clean
 # 删除lock文件
-# rm -rf pubspec.lock
+rm -rf pubspec.lock
 echo "==>  更新依赖 ==="
-# flutter pub get
+flutter pub get
 
 # 开始打包
 if (($((ch_num)) == 0)); then
