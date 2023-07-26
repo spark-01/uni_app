@@ -117,6 +117,7 @@ flutter:
   assets:
     - assets/dm/
     - assets/base/
+    - assets/base_dm/
     - assets/game/
     - assets/game_dm/
     - assets/wallet/
