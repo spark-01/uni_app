@@ -24,7 +24,7 @@ dependencies:
       url: https://pub.91momo50.vip
   # 组件
   uni_widget:
-    version: ^1.1.6
+    version: ^1.1.8
     hosted:
       name: uni_widget
       url: https://pub.91momo50.vip
