@@ -17,7 +17,7 @@ class AppPages {
 
   static final pages = [
     /// 主页
-    GetPage(name: BaseRoutes.videoMain, page: () => MainPage(), bindings: [
+    GetPage(name: BaseRoutes.main, page: () => MainPage(), bindings: [
       AppBindings(),
       VideoHomeBinding(),
       MineDmBinding(),
