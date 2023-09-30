@@ -117,6 +117,7 @@ flutter:
     - assets/game/
     - assets/wallet/
     - assets/widget/
+    - assets/widget_dm/
     - assets/video/
     - assets/community/
     - assets/mine/
