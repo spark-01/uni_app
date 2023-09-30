@@ -1,10 +1,10 @@
 name: uni_app_cfox
 description: 彩狐视频主应用
-homepage: http://git.91momo50.vip/flutter/uni-common.git
-repository: http://git.91momo50.vip/flutter/uni-common.git
+homepage:  http://gitlab.apollo.5achang.com/flutter/uni_app.git
+repository:  http://gitlab.apollo.5achang.com/flutter/uni_app.git
 
-publish_to: 'https://pub.91momo50.vip'
-version: 1.3.3
+publish_to: 'http://16.163.159.207:4000'
+version: 1.0.0
 
 environment:
   sdk: '>=2.19.0 <3.0.0'
@@ -19,109 +19,89 @@ dependencies:
   get: ^4.6.5
   # 基类
   uni_base:
-    version: ^1.3.2
+    version: ^1.0.0-bate.2
     hosted:
       name: uni_base
-      url: https://pub.91momo50.vip
+      url: http://16.163.159.207:4000
   # 组件
   uni_widget:
-    version: ^1.1.6
+    version: ^1.0.0-bate
     hosted:
       name: uni_widget
-      url: https://pub.91momo50.vip
+      url: http://16.163.159.207:4000
   # 网络
   uni_http:
-    version: ^1.2.6
+    version: ^1.0.0-bate
     hosted:
       name: uni_http
-      url: https://pub.91momo50.vip
-  # 图片
-  uni_image:
-    version: ^1.0.6
-    hosted:
-      name: uni_image
-      url: https://pub.91momo50.vip
-  # 下拉刷新
-  uni_refresh:
-    version: ^1.0.1
-    hosted:
-      name: uni_refresh
-      url: https://pub.91momo50.vip
+      url: http://16.163.159.207:4000
   # 通用
   uni_app_base:
-    version: ^1.0.8
+    version: ^1.0.0
     hosted:
       name: uni_app_base
-      url: https://pub.91momo50.vip
+      url: http://16.163.159.207:4000
   # 钱包
   uni_app_wallet:
-    version: ^1.0.6
+    version: ^1.0.0
     hosted:
       name: uni_app_wallet
-      url: https://pub.91momo50.vip
+      url: http://16.163.159.207:4000
   # 游戏
   uni_app_game:
-    version: ^1.0.4
+    version: ^1.0.0
     hosted:
       name: uni_app_game
-      url: https://pub.91momo50.vip
+      url: http://16.163.159.207:4000
   # 视频
   uni_app_video:
-    version: ^1.0.0-bate.4
+    version: ^1.0.0
     hosted:
       name: uni_app_video
-      url: https://pub.91momo50.vip
+      url: http://16.163.159.207:4000
   # 抖音
   uni_app_douyin:
-    version: ^1.0.4
+    version: ^1.0.0
     hosted:
       name: uni_app_douyin
-      url: https://pub.91momo50.vip
+      url: http://16.163.159.207:4000
   # 社区
   uni_app_community:
-    version: ^1.0.2
+    version: ^1.0.0
     hosted:
       name: uni_app_community
-      url: https://pub.91momo50.vip
+      url: http://16.163.159.207:4000
   # 创作中心
   uni_app_creator:
-    version: ^1.0.4
+    version: ^1.0.0
     hosted:
       name: uni_app_creator
-      url: https://pub.91momo50.vip
-  # up主
-  uni_app_up:
-    version: ^1.0.2
-    hosted:
-      name: uni_app_up
-      url: https://pub.91momo50.vip
+      url: http://16.163.159.207:4000
   # 我的
-  uni_app_mine_cfox:
-    version: ^1.0.0-bate.6
+  uni_app_mine:
+    version: ^1.0.0
     hosted:
-      name: uni_app_mine_cfox
-      url: https://pub.91momo50.vip
+      name: uni_app_mine
+      url: http://16.163.159.207:4000
 
-# 覆盖依赖
-#dependency_overrides:
-#  uni_app_base:
-#    path: ../../uni_sub_app/uni_app_base
-#  uni_app_creator:
-#    path: ../../uni_sub_app/uni_app_creator
-#  uni_app_game:
-#    path: ../../uni_sub_app/uni_app_game
-#  uni_app_wallet:
-#    path: ../../uni_sub_app/uni_app_wallet
-#  uni_app_community:
-#    path: ../../uni_sub_app/uni_app_community
-#  uni_app_video:
-#    path: ../../uni_sub_app/uni_app_video
-#  uni_app_up:
-#    path: ../../uni_sub_app/uni_app_up
-#  uni_app_mine_cfox:
-#    path: ../../uni_sub_app/uni_app_mine_cfox
-#  uni_app_douyin:
-#    path: ../../uni_sub_app/uni_app_douyin
+# 覆盖依赖，本地调试
+dependency_overrides:
+  uni_app_base:
+    path: ../../uni_sub_app/uni_app_base
+  uni_app_wallet:
+    path: ../../uni_sub_app/uni_app_wallet
+  uni_app_creator:
+    path: ../../uni_sub_app/uni_app_creator
+  uni_app_game:
+    path: ../../uni_sub_app/uni_app_game
+  uni_app_video:
+    path: ../../uni_sub_app/uni_app_video
+  uni_app_douyin:
+    path: ../../uni_sub_app/uni_app_douyin
+  uni_app_community:
+    path: ../../uni_sub_app/uni_app_community
+  uni_app_mine:
+    path: ../../uni_sub_app/uni_app_mine
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -6,7 +6,7 @@ import 'package:uni_app_cfox/trans/app_trans.dart';
 import 'package:uni_app_community/page/up_home/community_home_page.dart';
 import 'package:uni_app_douyin/page/home/douyin_home_page.dart';
 import 'package:uni_app_game/page/home/game_home_page.dart';
-import 'package:uni_app_mine_cfox/page/home/mine_page.dart';
+import 'package:uni_app_mine/page/home/mine_page.dart';
 import 'package:uni_app_video/page/video_home/video_home_page.dart';
 import 'package:uni_widget/ol_keep_alive_widget.dart';
 

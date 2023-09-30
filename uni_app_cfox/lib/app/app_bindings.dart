@@ -3,7 +3,7 @@ import 'package:uni_app_base/app/app_base_bindings.dart';
 import 'package:uni_app_creator/app/app_creator_bindings.dart';
 import 'package:uni_app_douyin/app/app_douyin_bindings.dart';
 import 'package:uni_app_game/app/app_game_bindings.dart';
-import 'package:uni_app_mine_cfox/app/app_mine_bindings.dart';
+import 'package:uni_app_mine/app/app_mine_bindings.dart';
 import 'package:uni_app_video/app/app_video_bindings.dart';
 import 'package:uni_app_wallet/app/app_wallet_bindings.dart';
 import 'package:uni_base/getx/get_base_binding.dart';
