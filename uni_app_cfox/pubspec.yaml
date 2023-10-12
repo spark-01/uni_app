@@ -102,6 +102,10 @@ dependency_overrides:
     path: ../../uni_sub_app/uni_app_community
   uni_app_mine:
     path: ../../uni_sub_app/uni_app_mine
+  uni_widget:
+    path: ../../uni-common/uni_widget
+  uni_http:
+    path: ../../uni-common/uni_http
 dev_dependencies:
   flutter_test:
     sdk: flutter
