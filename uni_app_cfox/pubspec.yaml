@@ -31,7 +31,7 @@ dependencies:
       url: http://16.163.159.207:4000
   # 网络
   uni_http:
-    version: ^1.0.0-bate
+    version: ^1.0.0-bate.1
     hosted:
       name: uni_http
       url: http://16.163.159.207:4000
