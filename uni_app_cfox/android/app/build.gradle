@@ -37,6 +37,8 @@ android {
     if (channel == null) {
         channel = "official"
     }
+    //这行代码可以解决中文乱码问题
+    System.setOut(new PrintStream(System.out, true, "UTF-8"));
     println("====渠道：${channel}")
     // 应用类型
     def appType = androidConfig.appType
