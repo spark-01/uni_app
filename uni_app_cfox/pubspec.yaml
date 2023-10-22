@@ -16,70 +16,70 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  get: ^4.6.6
+  get: ^4.6.5
   # 基类
   uni_base:
-    version: ^1.0.0-bate
+    version: ^1.0.0-bate.2
     hosted:
       name: uni_base
       url: http://16.163.159.207:4000
   # 组件
   uni_widget:
-    version: ^1.0.0-bate
+    version: ^1.0.0-bate.3
     hosted:
       name: uni_widget
       url: http://16.163.159.207:4000
   # 网络
   uni_http:
-    version: ^1.0.0-bate.1
+    version: ^1.0.0-bate.2
     hosted:
       name: uni_http
       url: http://16.163.159.207:4000
   # 通用
   uni_app_base:
-    version: ^1.0.0
+    version: ^1.0.0-bate
     hosted:
       name: uni_app_base
       url: http://16.163.159.207:4000
   # 钱包
   uni_app_wallet:
-    version: ^1.0.0
+    version: ^1.0.0-bate.1
     hosted:
       name: uni_app_wallet
       url: http://16.163.159.207:4000
   # 游戏
   uni_app_game:
-    version: ^1.0.0
+    version: ^1.0.0-bate.1
     hosted:
       name: uni_app_game
       url: http://16.163.159.207:4000
   # 视频
   uni_app_video:
-    version: ^1.0.0
+    version: ^1.0.0-bate.1
     hosted:
       name: uni_app_video
       url: http://16.163.159.207:4000
   # 抖音
   uni_app_douyin:
-    version: ^1.0.0
+    version: ^1.0.0-bate.1
     hosted:
       name: uni_app_douyin
       url: http://16.163.159.207:4000
   # 社区
   uni_app_community:
-    version: ^1.0.0
+    version: ^1.0.0-bate
     hosted:
       name: uni_app_community
       url: http://16.163.159.207:4000
   # 创作中心
   uni_app_creator:
-    version: ^1.0.0
+    version: ^1.0.0-bate
     hosted:
       name: uni_app_creator
       url: http://16.163.159.207:4000
   # 我的
   uni_app_mine:
-    version: ^1.0.0
+    version: ^1.0.0-bate.1
     hosted:
       name: uni_app_mine
       url: http://16.163.159.207:4000
