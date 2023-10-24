@@ -25,7 +25,7 @@ dependencies:
       url: http://16.163.159.207:4000
   # 组件
   uni_widget:
-    version: ^1.0.0-bate.3
+    version: ^1.0.0-bate.4
     hosted:
       name: uni_widget
       url: http://16.163.159.207:4000
