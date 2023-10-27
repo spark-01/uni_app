@@ -1495,10 +1495,10 @@ packages:
     dependency: "direct main"
     description:
       name: uni_http
-      sha256: c77f2d5de1e1a54c3e026d0f2f545334c4ca320a6ccc9bbeca65fc37cda2627c
+      sha256: ca3ee59952dc73a2532b465ffab5845994d85ba7c73083e00bf84c13a1f89cef
       url: "http://16.163.159.207:4000"
     source: hosted
-    version: "1.0.0-bate.2"
+    version: "1.0.0-bate.3"
   uni_player:
     dependency: transitive
     description:
@@ -1519,10 +1519,10 @@ packages:
     dependency: "direct main"
     description:
       name: uni_widget
-      sha256: "424a40ea5d5f1c2feb71ff12f086adde6165fcd08a051edfb33e6eba1d715004"
+      sha256: "15b378f310d71e26a0e9e863e90f53a061ae24b1ff143520b16caa86e564d414"
       url: "http://16.163.159.207:4000"
     source: hosted
-    version: "1.0.0-bate.3"
+    version: "1.0.0-bate.5"
   universal_io:
     dependency: transitive
     description:

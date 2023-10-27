@@ -24,8 +24,8 @@ ext.env = [
         appName   : "彩狐视频",
 
         //dev环境
-        vCodeDev  : 101,
-        vNameDev  : "1.0.1",
+        vCodeDev  : 103,
+        vNameDev  : "1.0.3",
         appNameDev: "彩狐视频(D)",
         suffixDev : ".dev",
 
